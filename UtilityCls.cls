@@ -35,7 +35,7 @@ public virtual without sharing class UtilityCls {
 	* @param recordTypeName, developer name of the record type
 	* @return recordType Id, null if incorrect params or 
 	*/
-    public Boolean recordTypeIdOf(String objectName, String recordTypeName) {
+    public Id recordTypeIdOf(String objectName, String recordTypeName) {
         if (objectName == '' || recordTypeName = '')
 			return null;
 		return Schema.getGlobalDescribe().get(objectName).getDescribe().getRecordTypeInfosByName().get(recordTypeName).getRecordTypeId();
