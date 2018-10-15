@@ -28,4 +28,16 @@ public virtual without sharing class UtilityCls {
     public Boolean isOnOrBefore(Date date1, Date date2) {
         return date1.daysBetween(date2) >= 0;
     }
+	
+	/**
+	* This method is used to determine record type id for a given sObject and record type name
+	* @param objectName, input parameter to the declare the sObject name
+	* @param recordTypeName, developer name of the record type
+	* @return recordType Id, null if incorrect params or 
+	*/
+    public Boolean recordTypeIdOf(String objectName, String recordTypeName) {
+        if (objectName == '' || recordTypeName = '')
+			return null;
+		return Schema.getGlobalDescribe().get(objectName).getDescribe().getRecordTypeInfosByName().get(recordTypeName).getRecordTypeId();
+    }
 }
