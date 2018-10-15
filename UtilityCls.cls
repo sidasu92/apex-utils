@@ -42,4 +42,8 @@ public virtual without sharing class UtilityCls {
 			return null;
 		return Schema.getGlobalDescribe().get(objectName).getDescribe().getRecordTypeInfosByName().get(recordTypeName).getRecordTypeId();
     }
+	
+    public String returnSingleQuotedStringFor(String inputString)  {
+        return '\'' + inputString + '\'';
+    }
 }
