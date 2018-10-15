@@ -6,6 +6,8 @@ History:
 VERSION  AUTHOR                 DATE                DETAIL           
 1.       Sidhant Agarwal        10/15/2018          Original Version 
 2.       Sidhant Agarwal        10/15/2018          Added isOnOrBefore method
+3.       Sidhant Agarwal        10/15/2018          Added recordTypeIdOf method
+4.       Sidhant Agarwal        10/15/2018          Updated recordTypeIdOf method for return type
 ***************************************************************************************/
 
 public virtual without sharing class UtilityCls {
@@ -35,7 +37,7 @@ public virtual without sharing class UtilityCls {
 	* @param recordTypeName, developer name of the record type
 	* @return recordType Id, null if incorrect params or 
 	*/
-    public Boolean recordTypeIdOf(String objectName, String recordTypeName) {
+    public Id recordTypeIdOf(String objectName, String recordTypeName) {
         if (objectName == '' || recordTypeName = '')
 			return null;
 		return Schema.getGlobalDescribe().get(objectName).getDescribe().getRecordTypeInfosByName().get(recordTypeName).getRecordTypeId();
