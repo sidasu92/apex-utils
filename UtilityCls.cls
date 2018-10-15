@@ -5,6 +5,7 @@ History:
 -------                                                            
 VERSION  AUTHOR                 DATE                DETAIL           
 1.       Sidhant Agarwal        10/15/2018          Original Version 
+2.       Sidhant Agarwal        10/15/2018          Added isOnOrBefore method
 ***************************************************************************************/
 
 public virtual without sharing class UtilityCls {
@@ -18,4 +19,13 @@ public virtual without sharing class UtilityCls {
         return obj != null && obj.length ()> 0;
     }
 	
+	/**
+	* This method is used to determine if first input is before second input
+	* @param date1, first date input param
+	* @param date2, second date input param
+	* @return Boolean if the first date is before second date
+	*/
+    public Boolean isOnOrBefore(Date date1, Date date2) {
+        return date1.daysBetween(date2) >= 0;
+    }
 }
