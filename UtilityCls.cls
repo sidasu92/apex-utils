@@ -6,6 +6,8 @@ History:
 VERSION  AUTHOR                 DATE                DETAIL           
 1.       Sidhant Agarwal        10/15/2018          Original Version 
 2.       Sidhant Agarwal        10/15/2018          Added isOnOrBefore method
+3.       Sidhant Agarwal        10/15/2018          Added recordTypeIdOf method
+4.       Sidhant Agarwal        10/15/2018          Updated recordTypeIdOf method for return type
 ***************************************************************************************/
 
 public virtual without sharing class UtilityCls {
